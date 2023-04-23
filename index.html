@@ -1,0 +1,53 @@
+---
+title: blog
+---
+
+<html>
+<head>
+    <title>Balaji Varatharajan</title>
+    <meta charset='UTF-8'>
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
+
+    <meta name='description' content='Balaji Varatharajan is an ML Researcher.'>
+    <meta name='keywords' content='
+        machine learning,
+        deep learning,
+        computer science,
+        mathematics
+    '>
+    <meta name='author' content='Balaji Varatharajan'>
+
+    <link rel='icon' href='https://em-content.zobj.net/thumbs/160/twitter/141/brain_1f9e0.png'/>
+    <link href='/css/blog.css' rel='stylesheet'/>
+
+    {% include mathjax.html %}
+</head>
+<body>
+    {% include nav.html %}
+    <div id='blog' class='wrap'>
+        <div id='intro'>
+            <div class='quote'>
+                <p>"The noblest pleasure is the joy of understanding"<br>~ Leonardo da Vinci</p>
+            </div>
+        </div>
+        <div id='posts' class='section'>
+            {% for post in site.posts %}
+                <div class='post-row'>
+                    <p class='post-title'>
+                        <a href="{{ post.url }}">
+                            {{ post.title }}
+                        </a>
+                    </p>
+                    <p class='post-date'>
+                        {{ post.date | date_to_long_string }}
+                    </p>
+                </div>
+                <p class='post-subtitle'>
+                    {{ post.subtitle }}
+                </p>
+                <span class='hidden'>{{ forloop.index }}</span>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
