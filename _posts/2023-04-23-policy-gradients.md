@@ -38,7 +38,7 @@ discounted rewards (or expected return).
 
 $$\begin{gathered}
   J(\theta) = \mathop{\mathrm{\mathbb{E}}}_{\tau \sim \pi_{\theta}}[R(\tau)] \\
-  \text{where~$R(\tau) = \sum_{t=0}^{T} \gamma^{t} r_{t}$ }
+  \text{where $R(\tau) = \sum_{t=0}^{T} \gamma^{t} r_{t}$ }
 \end{gathered}$$
 
 Policy gradient methods directly optimizes the policy ($\pi_{\theta}$)
@@ -164,7 +164,7 @@ reinforce actions based on it's contribution to the Return.
 
 $$\begin{gathered}
   \nabla_{\theta} J(\theta) = \mathop{\mathrm{\mathbb{E}}}_{\tau \sim \pi_{\theta}} \biggr[ \sum_{t=0}^{T} \nabla_{\theta} \log \pi_{\theta}(a_{t}|s_{t}) R_{t} \biggr] \\ \\
-  \text{where~$R_{t}$ is Return at time-step $t$}
+  \text{where $R_{t}$ is Return at time-step $t$}
 \end{gathered}$$
 
 ## Pseudo code for REINFORCE
