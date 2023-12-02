@@ -103,7 +103,7 @@ $$\begin{aligned}
 \log p(\tau|\theta) & = \log \biggl( p(s_{0}) \prod_{t=0}^{T} \pi_{\theta}(a_{t}|s_{t}) \cdot p(s_{t+1}|s_{t},a_{t}) \biggl) \\
 & = \log p(s_{0}) + \log \prod_{t=0}^{T} \pi_{\theta}(a_{t}|s_{t}) \cdot p(s_{t+1}|s_{t},a_{t}) &&\text{[Log of a Product = Sum of Logs]} \\
 & = \log p(s_{0}) + \sum_{t=0}^{T}  \log [ \pi_{\theta}(a_{t}|s_{t}) \cdot p(s_{t+1}|s_{t},a_{t}) ] \\
-& = \log p(s_{0}) + \sum_{t=0}^{T}  \log \pi_{\theta}(a_{t}|s_{t}) + \log p(s_{t+1}|s_{t},a_{t}) \\
+& = \log p(s_{0}) + \sum_{t=0}^{T} \biggl(  \log \pi_{\theta}(a_{t}|s_{t}) + \log p(s_{t+1}|s_{t},a_{t}) \biggl) \\
 \end{aligned}$$
 
 Now we can calculate the gradient of the log-probability of a trajectory 
@@ -115,7 +115,7 @@ Neither the initial state distribution $s_{0}$ nor the state transition
 function $p(s_{t+1}|s_{t},a_{t})$ depends upon the policy's parameters
 $\theta$, so their gradients are zero. So the above equation becomes,
 
-$$\nabla_{\theta} \log p(\tau|\theta) =  \sum_{t=0}^{T}\biggl(\nabla_{\theta} \log \pi_{\theta}(a_{t}|s_{t})\biggl)$$
+$$\nabla_{\theta} \log p(\tau|\theta) =  \sum_{t=0}^{T}\nabla_{\theta} \log \pi_{\theta}(a_{t}|s_{t})$$
 
 ## Putting it all together
 ---
