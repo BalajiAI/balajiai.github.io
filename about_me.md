@@ -16,8 +16,10 @@ study Mathematics, Running and ofcourse spending time with people.
 I'm also looking forward to meet new people, so if you're interseted in talking with me, shoot me
 an email.
 
+**I'm also open to opportunities like Freelancing, Consulting/Advising and Mentorship.**
+
 ## To Contact
 The best way to contact me is via [email](mailto:balajivd01@gmail.com).
 
 ## Links
-[Twitter](https://twitter.com/balajiai) – [LinkedIn](https://www.linkedin.com/in/balaji-ai/) – [Github](https://github.com/balajiai)
+[Twitter](https://twitter.com/balajiai) – [LinkedIn](https://www.linkedin.com/in/balaji-ai/) – [Github](https://github.com/balajiai) - [Upwork](https://www.upwork.com/freelancers/~01b311e9ac4c2d192b)
